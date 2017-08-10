@@ -22,6 +22,10 @@ angular.module('ui.bootstrap.deal', ['ui.bootstrap', 'daterangepicker'])
       console.log('dismiss');
     });
   };
+
+  $http.get('https://reqres.in/api/users?page=2').then(function (response) {
+    $scope.dealData = response.data;
+  });
 })
 .controller('DatepickerPopupDemoCtrl', function ($scope) {
   $scope.search = {
