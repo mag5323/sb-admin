@@ -75,19 +75,39 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        <div id="page-wrapper" ng-app="ui.bootstrap.deal">
 
-            <div class="container-fluid">
+            <div class="container-fluid" ng-controller="ModalDemoCtrl">
 
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             交易紀錄
+                            <button class="btn btn-primary btn-inverse" type="button" ng-click="open()">新增</button>
                         </h1>
                     </div>
                 </div>
                 <!-- /.row -->
+
+                <script type="text/ng-template" id="myModalContent.html">
+                    <form ng-submit="submit()">
+                        <div class="modal-body" id="modal-body">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Name" ng-model="deal.name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="deal.passwd">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="submit" class="btn btn-primary" value="送出" />
+                            <button class="btn btn-default" type="button" ng-click="cancel()">取消</button>
+                        </div>
+                    </form>
+                </script>
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -166,19 +186,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
-    <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
-
-    <!-- Flot Charts JavaScript -->
-    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-    <script src="js/plugins/flot/jquery.flot.js"></script>
-    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
-    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
-    <script src="js/plugins/flot/flot-data.js"></script>
-
+    <!-- Anuglar & UI Bootstrap -->
+    <script src="js/ui-bootstrap-custom-build/angular.min.js"></script>
+    <script src="js/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
+    <script src="js/ui-bootstrap-deal.js"></script>
 </body>
 
 </html>
