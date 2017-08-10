@@ -23,8 +23,16 @@ angular.module('ui.bootstrap.deal', ['ui.bootstrap', 'daterangepicker'])
     });
   };
 
-  $http.get('https://reqres.in/api/users?page=2').then(function (response) {
+  $http.get('https://reqres.in/api/users?page=4').then(function (response) {
     $scope.dealData = response.data;
+
+    // pagination;
+    $scope.totalItems = response.data.total;
+    $scope.currentPage = 1;
+
+    $scope.pageChanged = function() {
+      console.log('Page changed to: ' + $scope.currentPage);
+    };
   });
 })
 .controller('DatepickerPopupDemoCtrl', function ($scope) {
@@ -32,4 +40,3 @@ angular.module('ui.bootstrap.deal', ['ui.bootstrap', 'daterangepicker'])
     dt: {startDate: new Date(), endDate: new Date()}
   };
 });
-
