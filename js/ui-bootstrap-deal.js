@@ -1,5 +1,5 @@
-angular.module('ui.bootstrap.deal', ['ui.bootstrap'])
-.controller('ModalDemoCtrl', function($rootScope, $scope, $log, $uibModal) {
+angular.module('ui.bootstrap.deal', ['ui.bootstrap', 'daterangepicker'])
+.controller('ModalDemoCtrl', function($scope, $log, $uibModal, $http) {
   $scope.open = function(size) {
     var modalInstance = $uibModal.open({
         animation: true,
@@ -22,4 +22,10 @@ angular.module('ui.bootstrap.deal', ['ui.bootstrap'])
       console.log('dismiss');
     });
   };
+})
+.controller('DatepickerPopupDemoCtrl', function ($scope) {
+  $scope.search = {
+    dt: {startDate: new Date(), endDate: new Date()}
+  };
 });
+

@@ -23,6 +23,9 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- daterangepicker -->
+    <link href="css/plugins/daterangepicker.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -114,6 +117,9 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
+                                <div class="col-md-3" ng-controller="DatepickerPopupDemoCtrl">
+                                    <input type="text" class="form-control date-picker" date-range-picker ng-model="search.dt" placeholder="日期"/>
+                                </div>
                                 <form class="form-inline">
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="廠牌/產品/姓名">
@@ -207,6 +213,11 @@
     <script src="js/ui-bootstrap-custom-build/angular.min.js"></script>
     <script src="js/ui-bootstrap-custom-build/ui-bootstrap-custom-tpls-2.5.0.min.js"></script>
     <script src="js/ui-bootstrap-deal.js"></script>
+
+    <!-- daterangepicker -->
+    <script src="js/plugins/angular-daterangepicker/moment.js"></script>
+    <script src="js/plugins/angular-daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/plugins/angular-daterangepicker/angular-daterangepicker.min.js"></script>
 </body>
 
 </html>
