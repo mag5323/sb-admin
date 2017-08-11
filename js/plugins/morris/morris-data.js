@@ -7,58 +7,48 @@ $(function() {
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+            洗車: 2666,
+            交易: null,
         }, {
             period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+            洗車: 2778,
+            交易: 2294,
         }, {
             period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+            洗車: 4912,
+            交易: 1969,
         }, {
             period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+            洗車: 3767,
+            交易: 3597,
         }, {
             period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+            洗車: 6810,
+            交易: 1914,
         }, {
             period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+            洗車: 5670,
+            交易: 4293,
         }, {
             period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+            洗車: 4820,
+            交易: 3795,
         }, {
             period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+            洗車: 15073,
+            交易: 5967,
         }, {
             period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+            洗車: 10687,
+            交易: 4460,
         }, {
             period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+            洗車: 8432,
+            交易: 5713,
         }],
         xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
+        ykeys: ['洗車', '交易'],
+        labels: ['洗車', '交易'],
         pointSize: 2,
         hideHover: 'auto',
         resize: true
@@ -68,13 +58,13 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
+            label: "SUV",
             value: 12
         }, {
-            label: "In-Store Sales",
+            label: "Sedan",
             value: 30
         }, {
-            label: "Mail-Order Sales",
+            label: "Hatchback",
             value: 20
         }],
         resize: true
